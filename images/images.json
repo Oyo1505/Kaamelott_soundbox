@@ -1,0 +1,229 @@
+[
+	{
+		"id" : "0",
+		"character" : "Le Roi Burgonde",
+		"file" : "Le_Roi_Burgonde.jpg"
+	},
+
+	{
+		"id" : "1",
+		"character" : "Arthur",
+		"file" : "Arthur.jpg"
+	},
+	{
+		"id" : "2",
+		"character" : "Bohort",
+		"file" : "Bohort.jpg"
+	},		
+	{
+		"id" : "3",
+		"character" : "Leodagan",
+		"file" : "Leodagan.jpg"
+	},
+	{
+		"id" : "4",
+		"character" : "Angharad",
+		"file" : "Angharad.jpg"
+	},
+	{
+		"id" : "5",
+		"character" : "Azénor",
+		"file" : "Azenor.jpg"
+	},	
+	{
+		"id" : "6",
+		"character" : "Belt",
+		"file" : "Belt.jpg"
+	},	
+	{
+		"id" : "7",
+		"character" : "Breccan",
+		"file" : "Breccan.jpg"
+	},
+	{
+		"id" : "8",
+		"character" : "Caius",
+		"file" : "Caius.jpg"
+	},
+	{
+		"id" : "9",
+		"character" : "Calogrenant",
+		"file" : "Calogrenant.jpg"
+	},
+	{
+		"id" : "10",
+		"character" : "Dagonet",
+		"file" : "Dagonet.jpg"
+	},					
+	{
+		"id" : "11",
+		"character" : "Dame Séli",
+		"file" : "Dame_Séli.jpg"
+	},
+	{
+		"id" : "12",
+		"character" : "Demetra",
+		"file" : "Demetra.jpg"
+	},	
+	{
+		"id" : "13",
+		"character" : "Elias",
+		"file" : "Elias.jpg"
+	},
+	{
+		"id" : "14",
+		"character" : "Fearmac",
+		"file" : "Fearmac.jpg"
+	},
+	{
+		"id" : "15",
+		"character" : "Galessin",
+		"file" : "Galessin.jpg"
+	},
+	{
+		"id" : "16",
+		"character" : "Guenièvre",
+		"file" : "Guenièvre.jpg"
+	},
+	{
+		"id" : "17",
+		"character" : "Guethenoc",
+		"file" : "Guethenoc.jpg"
+	},
+	{
+		"id" : "18",
+		"character" : "Jacca",
+		"file" : "Jacca.jpg"
+	},
+	{
+		"id" : "19",
+		"character" : "Karadoc",
+		"file" : "Karadoc.jpg"
+	},
+	{
+		"id" : "20",
+		"character" : "L'Interprète",
+		"file" : "L_Interprète.jpg"
+	},
+	{
+		"id" : "21",
+		"character" : "Lancelot",
+		"file" : "Lancelot.jpg"
+	},
+	{
+		"id" : "22",
+		"character" : "Le Barde",
+		"file" : "Le_Barde.jpg"
+	},
+	{
+		"id" : "23",
+		"character" : "Le Maître d'armes",
+		"file" : "Le_Maître_d_armes.jpg"
+	},
+	{
+		"id" : "24",
+		"character" : "Le Répurgateur",
+		"file" : "Le_Répurgateur.jpg"
+	},
+	{
+		"id" : "25",
+		"character" : "Le tavernier",
+		"file" : "Le_tavernier.jpg"
+	},
+	{
+		"id" : "26",
+		"character" : "Loth",
+		"file" : "Loth.jpg"
+	},
+	{
+		"id" : "27",
+		"character" : "Merlin",
+		"file" : "Merlin.jpg"
+	},	
+	{
+		"id" : "28",
+		"character" : "Narces",
+		"file" : "Narsès.jpg"
+	},
+	{
+		"id" : "29",
+		"character" : "Père Blaise",
+		"file" : "Père_Blaise.jpg"
+	},
+	{
+		"id" : "30",
+		"character" : "Roparzh",
+		"file" : "Roparzh.jpg"
+	},
+	{
+		"id" : "31",
+		"character" : "Titus Nipius Glaucia",
+		"file" : "Titus_Nipius_Glaucia.jpg"
+	},
+	{
+		"id" : "32",
+		"character" : "Venec",
+		"file" : "Venec.jpg"
+	},
+	{
+		"id" : "33",
+		"character" : "Yvain",
+		"file" : "Yvain.jpg"
+	},
+	{
+		"id" : "34",
+		"character" : "Anna",
+		"file" : "Anna.png"
+	},		
+	{
+		"id" : "35",
+		"character" : "Appius Manilius",
+		"file" : "Appius_Manilius.png"
+	},
+	{
+		"id" : "36",
+		"character" : "Attila",
+		"file" : "Attila.png"
+	},
+	{
+		"id" : "37",
+		"character" : "Goustan",
+		"file" : "Goustan.png"
+	},
+	{
+		"id" : "38",
+		"character" : "Grüdü",
+		"file" : "Grüdü.png"
+	},
+	{
+		"id" : "39",
+		"character" : "Perceval",
+		"file" : "Perceval.png"
+	},
+	{
+		"id" : "41",
+		"character" : "Gauvain",
+		"file" : "Gauvain.png"
+	},
+		{
+		"id" : "42",
+		"character" : "Kadoc",
+		"file" : "Kadoc.jpg"
+	},
+	
+	{
+		"id" : "43",
+		"character" : "L'évêque Boniface",
+		"file" : "Boniface.jpg"
+	},
+	{
+		"id" : "44",
+		"character" : "La Dame du Lac",
+		"file" : "Dame_du_lac.jpg"
+	},
+		{
+		"id" : "45",
+		"character" : "Kay",
+		"file" : "Kay.jpg"
+	}																																																			
+]
