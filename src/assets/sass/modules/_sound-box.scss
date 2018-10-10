@@ -1,0 +1,58 @@
+#sound-box{
+	
+
+	.enabled{
+		display: block;
+	}
+}
+
+.box{
+	z-index: 1;
+	text-align: center;
+	
+	.sound-list{
+		padding: 0;
+		height:300px;
+		overflow-y:scroll;
+		.sound-item{
+			margin-bottom: 5px;
+		}
+	}
+	.title-character{
+		color: $grey;
+	}
+	.btn-play{
+		border: solid 1px #000;
+		border-radius: 20px;
+	}
+	.btn-open{
+		width: 100%;
+		height: 30px;
+		border: 2px solid #000;
+		bottom: 10%;
+	}
+	.picture-character{
+		width: 75%;
+		height: 60%;
+		border-radius: 30px/10px;
+	}
+
+	&.active{
+		z-index:3;
+		
+		.picture-character{
+		width: 25%;
+		height: 20%;
+		border-radius: 30%;
+		}
+
+	}	
+
+	li{
+		width: auto;
+		button{
+			width: 100%;
+			
+		}
+	}
+}
