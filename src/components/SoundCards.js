@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import SoundCard from './SoundCard';
 
 class SoundCards extends Component{
@@ -24,10 +24,10 @@ class SoundCards extends Component{
 		 }
 
 		return(
-			<div>
+			<Fragment>
 				{cardsKaamelott}
 					<div className="clear"></div>
-			</div>
+			</Fragment>
 			);
 	}
 }

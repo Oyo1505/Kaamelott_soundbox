@@ -23,10 +23,16 @@ class CardContent extends Component {
 			
 			var sound = document.getElementById(`${this.props.data.file}`);
 			const currentState = this.state.active;
-        	this.setState({ active: !currentState });
 			sound.currentTime=0;
-		
+			if(!currentState){
 				sound.play();
+			}else if(currentState){
+				sound.pause();
+			}
+        	this.setState({ active: !currentState });
+			
+			
+				
 
 			
 
@@ -53,7 +59,7 @@ class CardContent extends Component {
 		 return (
 		    <Fragment>
 		    	
-		    		<li className="sound-item"> <button onClick={this.play} onEnded={this.soundEnded} ><audio className={this.state.active ? 'playing' : null} preload="none" id={this.props.data.file}   src={soundFile}></audio><span>{title.lenght <= 27  ? 
+		    		<li key={title} className="sound-item"> <button onClick={this.play} onEnded={this.soundEnded} ><audio className={this.state.active ? 'playing' : null} preload="none" id={this.props.data.file}   src={soundFile}></audio><span>{title.lenght <= 27  ? 
 
 		    				title :
 

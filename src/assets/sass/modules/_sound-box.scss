@@ -1,15 +1,8 @@
-#sound-box{
-	
-
-	.enabled{
-		display: block;
-	}
-}
 
 .box{
-	z-index: 1;
-	text-align: center;
 	
+	text-align: center;
+	position: relative;
 	.sound-list{
 		padding: 0;
 		height:300px;
@@ -21,24 +14,115 @@
 	.title-character{
 		color: $grey;
 	}
-	.btn-play{
-		border: solid 1px #000;
-		border-radius: 20px;
+
+.btnn {
+  color: #000;
+  cursor: pointer;
+  // display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+  
+//   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   }
+  
+  @media(min-width: 600px) {
+      
+    margin: 0 1em 2em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+    
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#000, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #000;
+  transition: width 280ms ease-in-out;
+  width: 70%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+	/*.btn-lol{
+
 	}
 	.btn-open{
+		position: absolute;
 		width: 100%;
 		height: 30px;
-		border: 2px solid #000;
-		bottom: 10%;
-	}
+		bottom: 0;
+		left: 0;
+		 background: rgba(#000, 0);
+    	border-bottom: 1px solid;
+    	color: #000;
+   		line-height: 1.4;
+    	padding: .25em;
+    
+    
+	    &:hover {
+	      background: rgba(#000, 1);
+	      color: $red;
+	    }
+	}*/
 	.picture-character{
+
 		width: 75%;
 		height: 60%;
 		border-radius: 30px/10px;
-	}
+		z-index: 2;
+		}
 
 	&.active{
-		z-index:3;
+		
 		
 		.picture-character{
 		width: 25%;
@@ -55,4 +139,11 @@
 			
 		}
 	}
+}
+
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	#sound-box{margin-left: 50px;}
+
 }
