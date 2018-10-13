@@ -24,7 +24,7 @@ export default class Modal extends React.Component {
 				 { on && 
 				 	(styles => (	
 						<ModalWrapper>
-							<ModalCard className='box' style={{
+							<ModalCard className='modal-box'  style={{
 								   transform: styles.y.interpolate( y => `translate3d(0, ${y}, 0)`),styles }} >
 								<CloseButton onClick={toggle}>
 									<Icon  name='close'/>
@@ -59,9 +59,10 @@ const AnimCard = Card.withComponent(animated.div);
 const ModalCard = AnimCard.extend`
 	position:relative;
 	z-index:10;
-	min-width: 400px;
 	margin-bottom:100px; 
 	position:fixed;
+	min-width:25%;
+	min-height: 60%;
 
 `;
 const CloseButton = styled.button`
@@ -81,6 +82,7 @@ const Background = styled(animated.div)`
 	background: black;
 	opacity : 0.5;
 	position:fixed;
+	z-index:9;
 `;
 	/*Type de Modal réutilisatble*/
 

@@ -1,8 +1,31 @@
-
+#sound-box{
+	margin: 0	auto; 
+}
 .box{
 	
 	text-align: center;
 	position: relative;
+
+	img{
+		
+	}
+	.title-character{
+		color: $grey;
+	}
+	.picture-character{
+
+		width: 75%;
+		height: 60%;
+		border-radius: 30px/10px;
+		z-index: 2;
+		}
+		
+}
+
+.modal-box{
+
+
+	text-align: center;
 	.sound-list{
 		padding: 0;
 		height:300px;
@@ -11,11 +34,29 @@
 			margin-bottom: 5px;
 		}
 	}
-	.title-character{
-		color: $grey;
+	
+	img{
+		width: 65%;
+		height: 40%;
+	}
+	.picture-character{
+
+	
+		border-radius: 30px/10px;
+		z-index: 2;
+	}
+	li{
+		width: auto;
+		button{
+			width: 100%;
+			
+		}
 	}
 
+	
+}
 .btnn {
+position: absolute;
   color: #000;
   cursor: pointer;
   // display: block;
@@ -28,27 +69,28 @@
   text-decoration: none;
   text-transform: uppercase;
   width: 100%; 
+  bottom: 0;
+  left: 0;
+   @media(min-width: 400px) {
+     display: inline-block;
+     margin-right: 2.5em;
   
-//   @media(min-width: 400px) {
-//     display: inline-block;
-//     margin-right: 2.5em;
-  
-//     &:nth-of-type(even) {
-//       margin-right: 0;
-//     }
-//   }
+     &:nth-of-type(even) {
+      margin-right: 0;
+     }
+   }
   
   @media(min-width: 600px) {
       
     margin: 0 1em 2em;
   
-//     &:nth-of-type(even) {
-//       margin-right: 2.5em;
-//     }
+     &:nth-of-type(even) {
+       margin-right: 2.5em;
+     }
     
-//     &:nth-of-type(5) {
-//       margin-right: 0;
-//     }
+     &:nth-of-type(5) {
+       margin-right: 0;
+     }
     
   }
   
@@ -113,37 +155,4 @@
 	      color: $red;
 	    }
 	}*/
-	.picture-character{
-
-		width: 75%;
-		height: 60%;
-		border-radius: 30px/10px;
-		z-index: 2;
-		}
-
-	&.active{
-		
-		
-		.picture-character{
-		width: 25%;
-		height: 20%;
-		border-radius: 30%;
-		}
-
-	}	
-
-	li{
-		width: auto;
-		button{
-			width: 100%;
-			
-		}
-	}
-}
-
-@media only screen and (min-width: 1030px) {
-
-	// styles in 1030up.scss
-	#sound-box{margin-left: 50px;}
-
-}
+	
