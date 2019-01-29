@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import SoundCard from './SoundCard';
+import { Container, Row, Col}from 'react-bootstrap';
 
 class SoundCards extends Component{
 
@@ -17,8 +18,7 @@ class SoundCards extends Component{
 
 		 	cardsKaamelott = this.props.kaamelott.map(function(card){
 		
-
-		 		return (  <SoundCard kaamelott={card} key={card.character} />);
+		 		return (<Col xs={2} >  <SoundCard  kaamelott={card} key={`${card.id}-2`} /></Col>);
 		 		
 		 	})
 		 }

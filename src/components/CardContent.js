@@ -59,7 +59,7 @@ class CardContent extends Component {
 		 return (
 		    <Fragment>
 		    	
-		    		<li key={title} className="sound-item"> <button onClick={this.play} onEnded={this.soundEnded} ><audio className={this.state.active ? 'playing' : null} preload="none" id={this.props.data.file}   src={soundFile}></audio><span>{title.lenght <= 27  ? 
+		    		<li key={`sound-${title}`} className="sound-item"> <button onClick={this.play} onEnded={this.soundEnded} ><audio className={this.state.active ? 'playing' : null} preload="none" id={this.props.data.file}   src={soundFile}></audio><span>{title.lenght <= 27  ? 
 
 		    				title :
 
