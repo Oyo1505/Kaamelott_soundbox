@@ -1,54 +1,40 @@
-import React, { Component } from 'react';
-import {Grid, Row } from 'react-bootstrap';
-import SoundCards from '../components/SoundCards';
-import characters from '../sounds/kamelott/sounds.json';
+import React, { Component, Fragment } from 'react';
+import SoundCards from '../components/Kaamelott/SoundCards';
 import imagesCharacter from '../images/images.json';
 
-class SoundBox extends Component{
+class SoundBox extends Component {
 
-	constructor(){
-		super()
+    constructor() {
+        super()
+        this.state = {
+            kaamelott: [],
 
-		this.state = {
-			kaamelott:[],
-			
-			};
+        };
+    }
 
-	}
+    componentDidMount() {
 
-	componentWillMount() {
-		
-		let arrayCharacter = [];
-		imagesCharacter.map(function(image){
-			var link = require(`../images/${image.file}`)
-			arrayCharacter.push({id:image.id, character:image.character, file : link});
-			
-		});
-	
-		this.setState({kaamelott:arrayCharacter});
-		
-		
+        let arrayCharacter = [];
+        imagesCharacter.map(function(image) {
+            var link = require(`../images/${image.file}`)
+            return arrayCharacter.push({ id: image.id, character: image.character, file: link });
+        });
+        this.setState({ kaamelott: arrayCharacter });
+    }
 
-		
-	}
+    render() {
+        return (
+            <Fragment>
+                <h1>Kaamelott SoundBoxes</h1>
+                <section className="section-soundboxes">
+                    <SoundCards key={this.state.kaamelott.character} kaamelott={this.state.kaamelott} />
+                </section>
+				 
+			</Fragment>
+        )
 
-	componentDidMount(){
-		
-	}
+    }
 
-	render(){
-			return (
-				<Grid>
-					<Row className="show-grid">
-				    		
-				    		<SoundCards key={this.state.kaamelott.character} kaamelott={this.state.kaamelott} />
-				    		
-				   </Row>
-			    </Grid>
-			  )
-
-	}
-  
 }
 
 export default SoundBox;

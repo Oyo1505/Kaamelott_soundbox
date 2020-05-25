@@ -44,23 +44,25 @@ class CardContent extends Component {
     }
 
     render() {
-
         let title = this.props.data.title;
-        let playingClass = ['playing'];
-
-
         const soundFile = require(`../../sounds/kamelott/${this.props.data.file}`);
-
         return (
             <Fragment>
-		    	
-		    		<li key={`sound-${title}`} className="sound-item"> <button onClick={this.play} onEnded={this.soundEnded} ><audio className={this.state.active ? 'playing' : null} preload="none" id={this.props.data.file}   src={soundFile}></audio><span>{title.lenght <= 27  ? 
-
+                    <li key={`sound-${title}`}
+                     className="sound-item"> 
+                     <button onClick={this.play} onEnded={this.soundEnded} >
+                         <audio className={this.state.active ? 'playing' : null} 
+                                preload="none" id={this.props.data.file}   
+                                src={soundFile}>
+                        </audio>
+                         <span>{title.lenght <= 27  ? 
 		    				title :
-
 		    			this.replaceString(title)
-
-		    			}</span>  <i className={this.state.active ? 'icon icon-pause icon-play-soundbox ' :'icon icon-play icon-play-soundbox ' }></i> </button></li>
+		    			}
+                        </span>  
+                        <i className={this.state.active ? 'icon icon-pause icon-play-soundbox ' :'icon icon-play icon-play-soundbox ' }></i> 
+                        </button>
+                        </li>
 		    	
 		    </Fragment>
         )
