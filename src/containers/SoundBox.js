@@ -3,7 +3,6 @@ import SoundCards from '../components/Kaamelott/SoundCards';
 import imagesCharacter from '../images/images.json';
 
 class SoundBox extends Component {
-
     constructor() {
         super()
         this.state = {
@@ -11,9 +10,7 @@ class SoundBox extends Component {
 
         };
     }
-
     componentDidMount() {
-
         let arrayCharacter = [];
         imagesCharacter.map(function(image) {
             var link = require(`../images/${image.file}`)
@@ -21,20 +18,16 @@ class SoundBox extends Component {
         });
         this.setState({ kaamelott: arrayCharacter });
     }
-
     render() {
         return (
             <Fragment>
-                <h1>Kaamelott SoundBoxes</h1>
-                <section className="section-soundboxes">
+                <h1 style={{textAlign:"center"}}>Kaamelott SoundBox</h1>
+                <section className="section-soundbox">
                     <SoundCards key={this.state.kaamelott.character} kaamelott={this.state.kaamelott} />
                 </section>
-				 
 			</Fragment>
         )
-
     }
-
 }
 
 export default SoundBox;

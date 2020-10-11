@@ -6,15 +6,21 @@ import  sounds  from '../../sounds/kamelott/sounds.json'
 
 
 const CardTest = styled.div`
-	width: 15%;
 	height: 350px;
+	text-align: center;
+	position: relative;
 	margin-bottom:30px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
 	&:hover{
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	}
-	&.active{
+	.picture-character{
+		object-fit: cover;
+		width: 75%;
+		height: 60%;
+		border-radius: 30px/10px;
+		z-index: 2;
 	}
 `;
 
@@ -61,16 +67,18 @@ class SoundCard extends Component {
 		}
 
 	return(
-			<CardTest className={`${boxClass.join(' ')} soundbox-character`} id={this.props.kaamelott.character}   >
+		<Fragment>
+			<CardTest className={`${boxClass.join(' ')}`} id={this.props.kaamelott.character}   >
 				<img className="picture-character" id={`picture-${this.props.kaamelott.character}`} src={this.props.kaamelott.file} alt={`picture-${this.props.kaamelott.character}`}/>
 				<h4 className="title-character">{this.props.kaamelott.character  }</h4>
-					<Fragment>
-					 <button className='btnn btn-2' onClick={this.toggle}>Ouvrir</button>
-					 <Modal  show={this.state.end} onHide={this.handleClose}
+					
+					 <button className='btnn' onClick={this.toggle}>Ouvrir</button>
+			</CardTest>		 
+					 <Modal className="modal-soundbox"  show={this.state.end} onHide={this.handleClose}
 					         size="lg"
 							 aria-labelledby="contained-modal-title-vcenter"
 							centered>
-					        <Modal.Header closeButton>
+					        <Modal.Header  closeButton>
 								 <Modal.Title>
 									<img className="picture-character-modal" src={this.props.kaamelott.file} id={`picture-card-content-${this.props.kaamelott.character}`} alt={`picture-${this.props.kaamelott.character}`} />
 									 <h3 className="title-character-modal">{this.props.kaamelott.character  }</h3></Modal.Title>
@@ -87,7 +95,7 @@ class SoundCard extends Component {
 						</Modal.Body>
 					</Modal>
 				 </Fragment>
-			</CardTest>
+			
 
 		)
 	}
