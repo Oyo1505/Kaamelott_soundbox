@@ -1,13 +1,15 @@
-import React, { Component, Fragment } from 'react';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from 'react';
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 import styled from 'styled-components';
 import CardContent from './CardContent';
 import  sounds  from '../../sounds/kamelott/sounds.json'
 
 
-const CardTest = styled.div`
+const Card = styled.div`
 	height: 350px;
 	text-align: center;
+	width: 100%;
 	position: relative;
 	margin-bottom:30px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -25,79 +27,44 @@ const CardTest = styled.div`
 `;
 
 
-const backdropStyle = {
-  position: 'fixed',
-  zIndex: 1040,
-  top: 0,
-  bottom: 0,
-  left: 0,
-  right: 0,
-  backgroundColor: '#000',
-  opacity: 0.5
-};
-class SoundCard extends Component {
+function SoundCard (props) {
+	const [end, setEnd] = useState(false)
+	const [open, setOpen] = useState(false);
 
+	const onOpenModal = () => setOpen(true);
+	const onCloseModal = () => setOpen(false);
 
-	constructor(props){
-		super(props);
-		this.state = {end:false};
-		this.toggle = this.toggle.bind(this);
-		this.handleClose = this.handleClose.bind(this);
-	}
-
-	 handleClose() {
-    	this.setState({ end: false });
-  	}
-	toggle(){
-
-		this.setState({end: !this.state.end});
-	}
-
-	  renderBackdrop(props) {
-	    return <div {...props} style={backdropStyle} />;
-	  }
-	render() {
-	
-		const isEnd = this.state.end;
-		let boxClass = ["box"];
-
-		if(isEnd)
-		{
-			boxClass.push('active');
-		}
-
+	const isEnd = end;
+	let boxClass = ["box"];
+	if(isEnd){boxClass.push('active');}
 	return(
-		<Fragment>
-			<CardTest className={`${boxClass.join(' ')}`} id={this.props.kaamelott.character}   >
-				<img className="picture-character" id={`picture-${this.props.kaamelott.character}`} src={this.props.kaamelott.file} alt={`picture-${this.props.kaamelott.character}`}/>
-				<h4 className="title-character">{this.props.kaamelott.character  }</h4>
+		<>
+			<Card className={`${boxClass.join(' ')}`} id={props.kaamelott.character}   >
+				<img className="picture-character" id={`picture-${props.kaamelott.character}`} src={props.kaamelott.file} alt={`${props.kaamelott.character}`}/>
+				<h4 className="title-character">{props.kaamelott.character  }</h4>
 					
-					 <button className='btnn' onClick={this.toggle}>Ouvrir</button>
-			</CardTest>		 
-					 <Modal className="modal-soundbox"  show={this.state.end} onHide={this.handleClose}
-					         size="lg"
-							 aria-labelledby="contained-modal-title-vcenter"
-							centered>
-					        <Modal.Header  closeButton>
-								 <Modal.Title>
-									<img className="picture-character-modal" src={this.props.kaamelott.file} id={`picture-card-content-${this.props.kaamelott.character}`} alt={`picture-${this.props.kaamelott.character}`} />
-									 <h3 className="title-character-modal">{this.props.kaamelott.character  }</h3></Modal.Title>
-							</Modal.Header>
-						<Modal.Body>
-					        <ul className="sound-list">
+					 <button className='btnn' onClick={onOpenModal}>Ouvrir</button>
+			</Card>		 
+					 <Modal open={open} onClose={onCloseModal} center>
+						 <div className="modal-body">
+					        <div className="modal-header">
+								 <div>
+									<img className="picture-character-modal" src={props.kaamelott.file} id={`picture-card-content-${props.kaamelott.character}`} alt={`${props.kaamelott.character}`} />
+									 <h3 className="title-character-modal">{props.kaamelott.character  }</h3></div>
+							</div>
+						<div >
+					        <ul className="modal-soundbox-content">
 								{sounds.map(sound =>{
-									if(this.props.kaamelott.character === sound.character){
-									return(<CardContent  key={`card-content-${this.props.kaamelott.character}-${sound.title}`}  data={sound} file={sound.file} />);
+									if(props.kaamelott.character === sound.character){
+										return (<CardContent  key={`card-content-${props.kaamelott.character}-${sound.title}`}  data={sound} file={sound.file} />);
 									}
-								}
+									}
 								)}
 							</ul>
-						</Modal.Body>
+						</div>
+						</div>
 					</Modal>
-				 </Fragment>
-			
-
+				 </>
 		)
-	}
 }
 export default SoundCard;
